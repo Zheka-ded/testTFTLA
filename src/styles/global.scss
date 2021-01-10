@@ -1,0 +1,17 @@
+.body{
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'TTTravels-Light';
+    overflow-x: hidden;
+}
+
+.body__wrap{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: url('../img/cursor.svg'), default;
+}

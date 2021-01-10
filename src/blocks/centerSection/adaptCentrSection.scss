@@ -1,0 +1,53 @@
+@media screen and (max-width: 1024.98px) {
+
+    .center{
+        margin-top: 40px;
+        height: 150%;
+    }
+
+    .slider__wrap{
+        &::before{
+            width: 200%;
+            background-position-x: 70%;
+            background-position-y: 7px;
+        }
+    }
+
+    .swip__slide-active{
+        width: 359px;
+        height: 530px;
+    }
+
+    .swip__slide-text-active{
+        font-size: 96px;
+    }
+
+    .swip__slide-next{
+        width: 234px;
+        height: 162px;
+        right: -174px;
+    }
+
+    .swip__slide-prev{
+        width: 163px;
+        height: 226px;
+        left: -185px;
+    }
+
+}
+@media screen and (max-width: 768.98px) {
+
+    .center{
+        margin-top: 170px;
+    }
+
+    .slider__wrap{
+
+        &::before{
+            background-position-x: 50%;
+            height: 150%;
+            background-position-y: 90px;
+        }
+    }
+
+}

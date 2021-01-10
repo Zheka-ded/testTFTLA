@@ -1,0 +1,53 @@
+/* 
+    RIGHT
+*/
+
+.right{
+    position: relative;
+
+    &__text{
+        position: absolute;
+        width: 90px;
+        height: 110px;
+        right: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        overflow: hidden;
+
+        &::before{
+            content: 'InkLingerie';
+            position: absolute;
+            font-family: 'Schnyder_X_Cond_XL_Demi';
+            font-size: 125.581px;
+            line-height: 86%;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke-width: 0.83px;
+            -webkit-text-stroke-color: #580300;
+            top: 50%;
+            left: 10px;
+            transform: rotate(1.5deg) translateY(-50%);
+        }
+    }
+
+    &__nav{
+        margin: 43px 48px;
+    
+        ul{
+            li{
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 13px;
+                text-align: right;
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                color: #000000;
+                margin: 10px 0px;
+            }
+        }
+    
+    }
+
+}
+
+@import "./adaptRightSection.scss"

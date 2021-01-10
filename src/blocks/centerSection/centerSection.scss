@@ -1,0 +1,179 @@
+/* 
+    CENTER 
+*/
+
+// .center{}
+
+.slider__wrap{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 150%;
+        height: 100%;
+        background-image: url('../img/bg.svg');
+        background-repeat: no-repeat;
+        background-position-x: 110%;
+        background-position-y: 7px;
+    }
+}
+
+.image1{
+    background: url('../img/image1.png');
+}
+
+.image2{
+    background: url('../img/image2.png');
+}
+
+.image3{
+    background: url('../img/image3.png');
+}
+
+.m{
+    background: url('../img/m.jpg');
+}
+
+.m1{
+    background: url('../img/m1.jpg');
+}
+
+.m2{
+    background: url('../img/m2.jpg');
+}
+
+.swip__slide{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-active{
+        position: static;
+        margin-top: 74px;
+        width: 476px;
+        height: 702px;
+        transform: rotate(1.5deg);
+        z-index: 2;
+        animation: opasity-slide-active ease-in-out 0.3s;
+        
+    }
+
+}
+.swip__slide-text{
+    font-family: 'Schnyder_X_Cond_XL_Demi';
+    opacity: 0;
+
+    &-active{
+        position: absolute;
+        opacity: 1;
+        top: 50%; 
+        right: 50%;
+        transform: rotate(-1.5deg) translate(50%, -50%);
+        font-size: 125.581px;
+        line-height: 86%;
+        text-transform: uppercase;
+        color: #580300;
+        letter-spacing: 12px;
+        animation: slide-text-next ease-in-out 0.7s;
+    }
+
+}
+
+.swip__slide-next{
+    position: absolute;
+    right: -265px;
+    bottom: 41px;
+    width: 345px;
+    height: 238px;
+    transform: rotate(2.03deg);
+    background-position-y: -40px;
+    z-index: 3;
+    animation: opasity-slide-next ease-in-out 0.3s;
+
+    p{
+        opacity: 0;
+    }
+
+}
+
+.swip__slide-prev{
+    position: absolute;
+    left: -255px;
+    top: 240px;
+    width: 238px;
+    height: 331px;
+    background-size: 200%;
+    background-position-y: 15%;
+    transform: rotate(1.1deg);
+    z-index: 1;
+    animation: opasity-slide-prev ease-in-out 0.3s;
+
+    p{
+        opacity: 0;
+    }
+    
+}
+
+
+/* 
+    DRAG ME 
+*/
+
+.drag-me{
+    opacity: 0;
+    font-size: 8px;
+    position: absolute;
+
+    &-active{
+        position: fixed;
+        opacity: 1;
+        z-index: 100;
+    }
+
+}
+
+/* 
+    ANIMATION
+*/
+
+@keyframes opasity-slide-active {
+    0% {opacity: 1;} 50% {opacity: 0;} 100% {opacity: 1;}
+}
+
+@keyframes opasity-slide-next {
+    0% {opacity: 1;} 50% {opacity: 0;} 100% {opacity: 1;}
+}
+
+@keyframes opasity-slide-prev {
+    0% {opacity: 1;} 50% {opacity: 0;} 100% {opacity: 1;}
+}
+
+@keyframes slide-text-next {
+    0% {right: 50%;}
+
+    25%{right: 60%;
+        opacity: 1;}
+
+    45%{right: -500%;
+        opacity: 0; }
+
+    55%{ right: 500%;
+        opacity: 0;}
+
+    80%{right: 30%;
+        opacity: 0.7;}
+
+    100% {right: 50%;
+        opacity: 1;}
+}
+
+
+@import "./adaptCentrSection.scss"

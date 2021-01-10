@@ -1,0 +1,13 @@
+// reset css
+@import "./reset.scss";
+
+//  Global styles
+@import "./global.scss";
+
+// Fonts
+@import "./global-fonts.scss";
+
+// Blocks
+@import "./src/blocks/leftSection/leftSection.scss";
+@import "./src/blocks/centerSection/centerSection.scss";
+@import "./src/blocks/rightSection/rightSection.scss";

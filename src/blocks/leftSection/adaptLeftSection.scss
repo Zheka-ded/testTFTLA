@@ -1,0 +1,10 @@
+@media screen and (max-width: 1024.98px) {
+
+    .left__text{
+        &::before{
+            left: -290px;
+            font-size: 96px;
+        }
+    }
+
+}

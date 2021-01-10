@@ -1,0 +1,81 @@
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &__logo{
+        font-family: 'GT-America-Extended-Bold';
+        font-size: 16px;
+        line-height: 16px;
+        color: #000;
+        margin: 40px 47px;
+        letter-spacing: -1px;
+    }
+
+    &__text{
+        position: absolute;
+        width: 80px;
+        height: 110px;
+        left: 0px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        overflow: hidden;
+        
+        &::before{
+            content: 'Ink Lingerie';
+            position: absolute;
+            font-family: 'Schnyder_X_Cond_XL_Demi';
+            font-size: 125.581px;
+            line-height: 86%;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke-width: 0.83px;
+            -webkit-text-stroke-color: #580300;
+            top: 50%;
+            left: -390px;
+            transform: rotate(-1.5deg) translateY(-50%);
+        }
+    }
+
+    &__social{
+        margin: 47px 48px;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+
+            li{
+                position: relative;
+
+                margin-left: 60px;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 56px;
+                    height: 1px;
+                    right: 17px;
+                    bottom: 6px;
+                    background: #393939;
+                    opacity: 0.24;
+                }
+
+                &:first-child{
+                    margin-left: 0px;
+                    &::before{
+                        display: none;
+                    }
+                }
+
+                a{
+                    font-size: 11px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+
+}
+
+@import "./adaptLeftSection.scss"
