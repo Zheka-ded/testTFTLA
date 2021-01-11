@@ -9,3 +9,140 @@
     }
 
 }
+
+@media screen and (max-width: 414.98px) {
+    
+    .right{
+
+        &__btn-wrap{
+            display: flex;
+            margin: 38px 24px;
+        }
+
+        &__btn{
+            width: 20px;
+            height: 7px;
+            border: none;
+            background: transparent;
+            position: relative;
+            transition: 0.7s all ease;
+
+            &::before, &::after{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 1px;
+                background: rgba(40, 40, 40, 0.57);
+                left: 0;
+            }
+
+            &::before{
+                top: 0;
+                animation: btn-before ease-in-out 1s both;
+            }
+
+            &::after{
+                bottom: 0;
+                animation: btn-after ease-in-out 1s both;
+            }
+        }
+
+        &__btn-active{
+
+            &::before{
+                animation: btn-before-active ease-in-out 1s both;
+            }
+            
+            &::after{
+                animation: btn-after-active ease-in-out 1s both;
+            }
+
+        }
+
+        &__nav{
+            position: absolute;
+            margin: 0;
+            top: 50px;
+            right: 900px;
+            transition: 1s all ease;
+        }
+
+        &__nav-active{
+            right: 10px;
+            transition: 1s all ease;
+        }
+
+
+
+        &__text{
+
+            &::before{
+                font-size: 48px;
+                left: 65px;
+                top: 40%;
+            }
+        }
+
+    }
+}
+
+
+@keyframes btn-before-active {
+    0% {
+        top: 0;
+    }
+    50%{
+        top: 50%;
+    }
+    75% {
+        transform: rotate(90deg);
+    } 
+    100% {
+        transform: rotate(45deg) translateX(20%);
+    }
+}
+
+@keyframes btn-before {
+    0% {
+        transform: rotate(45deg) translateX(20%);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    75% {
+        top: 50%;
+    } 
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes btn-after-active {
+    0% {
+        bottom: 0;
+    }
+    50%{
+        bottom: 50%;
+    }
+    75% {
+        transform: rotate(90deg);
+    } 
+    100% {
+        transform: rotate(135deg) translateX(-20%);
+    }
+}
+
+@keyframes btn-after{
+    0% {
+        transform: rotate(135deg) translateX(-20%);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    75% {
+        bottom: 50%;
+    } 
+    100% {
+        bottom: 0;
+    }
+}

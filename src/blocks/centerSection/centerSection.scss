@@ -14,11 +14,11 @@
     &::before{
         content: '';
         position: absolute;
-        width: 150%;
+        width: 170%;
         height: 100%;
         background-image: url('../img/bg.svg');
         background-repeat: no-repeat;
-        background-position-x: 110%;
+        background-position-x: 80%;
         background-position-y: 7px;
     }
 }
@@ -58,11 +58,12 @@
     &-active{
         position: static;
         margin-top: 74px;
+        margin-bottom: 80px;
         width: 476px;
         height: 702px;
         transform: rotate(1.5deg);
         z-index: 2;
-        animation: opasity-slide-active ease-in-out 0.3s;
+        animation: opasity-slide-active ease-in-out 0.4s;
         
     }
 
@@ -90,13 +91,13 @@
 .swip__slide-next{
     position: absolute;
     right: -265px;
-    bottom: 41px;
+    bottom: 120px;
     width: 345px;
     height: 238px;
     transform: rotate(2.03deg);
     background-position-y: -40px;
     z-index: 3;
-    animation: opasity-slide-next ease-in-out 0.3s;
+    animation: opasity-slide-next ease-in-out 0.4s;
 
     p{
         opacity: 0;
@@ -114,7 +115,7 @@
     background-position-y: 15%;
     transform: rotate(1.1deg);
     z-index: 1;
-    animation: opasity-slide-prev ease-in-out 0.3s;
+    animation: opasity-slide-prev ease-in-out 0.4s;
 
     p{
         opacity: 0;
